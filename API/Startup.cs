@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using API.Data;
 using API.Models;
 using API.Services;
+using API.Extensions;
 
 namespace API
 {
@@ -35,7 +36,6 @@ namespace API
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
-
             services.AddMvc();
         }
 
@@ -56,7 +56,7 @@ namespace API
             app.UseStaticFiles();
 
             app.UseAuthentication();
-
+            app.UseMiddleware(typeof(ErrorHandlingMiddleware));
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

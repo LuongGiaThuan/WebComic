@@ -1,0 +1,23 @@
+<h1>CHAPTER</h1>
+<div ng-app="" ng-init="myurl='John'">
+    <p>Input something in the input box:</p>
+    <p>Name: <input type="text" ng-model="firstName"></p>
+    <p>You wrote: {{ myurl }}</p>
+</div>
+<div>
+    <div layout="row">
+        <div flex>First item in row</div>
+        <div flex="20">Second ite12321m in row</div>
+    </div>
+    <div layout="column">
+        <div flex="66">First item in column</div>
+        <div flex="33">Second item in column</div>
+    </div>
+
+</div>
+<p *ngIf="!chapterimgs"><em>Loading...</em></p>
+<div *ngIf="chapterimgs">
+    <div *ngFor="let item of chapterimgs">
+        <img layout-align="center end" src="{{ item.src }}" alt="Alternate Text" />
+    </div>
+</div>
