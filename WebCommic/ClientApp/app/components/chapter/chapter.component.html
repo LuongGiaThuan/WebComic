@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            <select class="form-control" id="sel1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div class="col-sm-10">
+            <div class="btn btn-danger">Prev Chapter</div>
+            <div class="btn btn-danger">Next Chapter</div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="info_story_user" class="info_story_user row">
+            <div class="info_story col-md-8">
+                <!--<div>
+                    <a href="#">Tây Du Ký ngoại truyện</a>
+                    <span> - </span>
+                    <a href="#">Chapter 47</a>
+                </div>-->
+                <div>
+                    <ul>
+                        <li>
+                            Cập nhật : 17:17 - 07/03/2018
+                        </li>
+                        <li>
+                            Đọc : 3199
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <p *ngIf="!chapterimgs"><em>Loading...</em></p>
+        <div *ngIf="chapterimgs">
+            <div *ngFor="let item of chapterimgs" class="row ">
+                <img class="img-responsive" src="{{ item.src }}" alt="Alternate Text" />
+            </div>
+        </div>
+    </div>
+</div>

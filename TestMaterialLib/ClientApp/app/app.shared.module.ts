@@ -9,7 +9,6 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
-import { ChapterComponent } from './components/chapter/chapter.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +16,6 @@ import { ChapterComponent } from './components/chapter/chapter.component';
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
-        ChapterComponent,
         HomeComponent
     ],
     imports: [
@@ -29,7 +27,6 @@ import { ChapterComponent } from './components/chapter/chapter.component';
             { path: 'home', component: HomeComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
-            { path: 'chapter', component: ChapterComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

@@ -1,0 +1,16 @@
+.row img {
+    border: 2px solid white;
+    border-radius: 3px;
+    margin: 0 auto;
+    display: block;
+}
+
+.info_story_user {
+    margin-top: 10px;
+    background-color: rgb(128, 128, 128);
+    border-radius: 10px;
+}
+
+div .row {
+    margin: 5px 5px 10px 5px;
+}
